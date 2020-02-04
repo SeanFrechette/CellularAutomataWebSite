@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <script src="behavior.js"></script>
+    <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>
+      Cellular Automata
+    </title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body class="works_on_smartphone">
+    <h1>
+      <b>
+        Cellular Automata
+      </b>
+    </h1>
+    <header>
+      <ul>
+        <li class="logo">
+          <a href="http://54.221.67.255/">❐</a>
+          </li>
+        <li>
+          <button class="button button1">
+            <a href="http://54.221.67.255"> Home </a>
+            </button>
+        </li>
+        <li>
+          <button class="button button1">
+          <a href="http://54.221.67.255/tweets.html"> Tweets </a>
+        </button>
+        </li>
+        <li>
+          <button class="button button1">
+          <a href="http://54.221.67.255/info.html"> More Info </a>
+        </button>
+        </li>
+        <li>
+          <button class="button button1">
+          <a href="http://54.221.67.255/aboutMe.html"> About Me </a>
+          </button>
+        </li>
+      </ul>
+      <div class="right">
+        <a href="https://twitter.com/SeanFrechette2?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @SeanFrechette2</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </header>
+    <main>
+      <article>
+        <h2>
+
+          What Are Cellular Automata?
+
+        </h2>
+        <p>
+
+          A Cellular Automaton is a collection of cells on a grid that evolves through a specified number of iterations. Cellular automata tend to have only two states, alive or dead, on or off, 0 or 1, and this is known as a boolean value. Each automaton has a ruleset which tells the cells what they should do according to its neighboring cells. The result of this is a very complex and unpredictable grid of cells. Cellular automata come in many different shapes and rules. For instance, The Wolfram Elementary Cellular Automata, created by Stephen Wolfram. It is a one-dimensional automaton, and is one of the most simple yet elegant automata created.
+
+        </p>
+
+        <hr>
+
+        <a href="http://mathworld.wolfram.com/CellularAutomaton.html">
+          <img src="https://writings.stephenwolfram.com/data/uploads/2017/05/rule-30.png" alt="rule-30" id="smart_thumbnail">
+        </a>
+        <p>
+          <sub>
+            This grid was created using rule 182 of Wolframs Automaton.
+          </sub>
+        </p>
+
+        <hr>
+
+        <h2>
+
+          How Do Cellular Automata Work?
+
+        </h2>
+        <p>
+
+          As previously stated, cellular automata are iterated using a ruleset, but what exactly is a ruleset? In order to determine what a ruleset actually is first we need to know what a cell is and what each cell does upon iteration. Cells only  have two states 0 or 1. An example of this can be seen in the image above. In this instance, cells that are white are recognized as dead, or 0, and cells that are black are recognized as alive, or 1. This is a one-dimensional cellular automata this means that our code only sees one line at a time. Every line is an iteration in our automaton. Every time this automata iterates it creates a new line below the line we just iterated. Afterwards, the code iterates the newly generated line. This process is continued for X amount of times, which creates the tiered structure you see in the image.
+
+        </p>
+
+        <hr>
+
+        <div>
+          <h2>
+
+
+            What Is A Ruleset?
+
+          </h2>
+          <p>
+            One question you may be asking is how a cell in the next generation knows if its going to be alive, or dead. Each cell is given three sets of data to determine what the next iteration of that cell will be; it knows its own boolean value and the states of its two adjacent neighbors. Next, the cell looks at the given ruleset. If you refer to the image above you might notice the set of squares below the triangle, that is the ruleset, rule 182 to be exact. The process is simple, because a cell can only see three cells at time there can only be eight possible states. The cell we're iterating chooses which of the eight states it equivalent to it and its neighbors and chooses what state it should be upon iteration. Because each cell only has two possible states, and there are eight possible combinations, that means there are 2^8, or 256 possible outcomes that could be iterated to; this is our ruleset. To better clarify, take rule 182, this means the boolean value is 10110110, or in base 10, 182. This boolean value can be seen in the image above as the resulting iteration values in the boxes below the triangle.
+          </p>
+        </div>
+
+        <hr>
+
+        <h2>
+
+          Why Are Cellular Automata Important?
+
+        </h2>
+        <p>
+          Cellular automata are used in day to day life in many various different fields, for instance, biology, chemistry, and epidemiology. While these examples use a much more complex version of the one-dimensional one discussed here the same basic principle is applied to each variant. Cellular automata is a great way to analyze the spread of viruses, chemical reactions, or generally anything that replicates. Cellular automata can be much more varied and complex than the automata described here, for instance, when many people think of cellular automata they generally think of Conway's Game Of Life, which is a famous two-dimensional cellular automata. Cellular automata can even have more states than the basic dead or alive. As you can see cellular automata are almost infinitely variable and can produce complex and unpredictable results with just a few lines of code.
+        </p>
+        <iframe width="640" height="480" src="https://www.youtube.com/embed/dQJ5aEsP6Fs"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <p>
+          <sub style="line-height: 1.35">
+            These Are Examples of 3D Cellular Automata
+          </sub>
+          </p>
+          <hr>
+</article>
+    </main>
+    <footer>
+      <div id="disqus_thread"></div>
+      <script>
+
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://cellularautomata-1.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      Made by <a href="https://twitter.com/@SeanFrechette2" target="_blank">Sean Frechette</a> for <a href="https://www.holbertonschool.com" target="_blank">Holberton School
+      </a>
+      <hr>
+    </footer>
+  </body>
+</html>
